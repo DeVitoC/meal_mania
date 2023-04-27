@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-          {/* <Favorites /> */}
-          {/* <Meals /> */}
-          <Modal />
           {/* <Search /> */}
+          {/* <Favorites /> */}
+          <Meals />
+          {/* <Modal /> */}
       </header>
     </div>
   );
