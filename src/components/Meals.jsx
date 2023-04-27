@@ -6,11 +6,16 @@ const Meals = () => {
   const { meals } = useGlobalContext();
 
   return (
-    <section>
+    <section className="section-center">
       {meals.map((singleMeal) => {
-        console.log(singleMeal);
-
-        return <h4>{singleMeal.strMeal}</h4>
+        const {idMeal, strMeal: title, strMealThumb: image} = singleMeal;
+        return <article className="single-meal" key={idMeal}>
+          <img src = {image} className="img" alt="meal"/>
+          <footer>
+            <h5>{title}</h5>
+            <button className="like-btn">Click me</button>
+          </footer>
+        </article>
       })}
     </section>
   );
