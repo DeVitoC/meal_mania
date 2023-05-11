@@ -44,6 +44,10 @@ const AppProvider = ({ children }) => {
     setShowModal(true);
   }
 
+  const closeModal = () => {
+    setShowModal(false);
+  }
+
   // const fetchData = async () => {
   //   try {
   //     const response = await fetch("https://randomuser.me/api/");
@@ -67,7 +71,7 @@ const AppProvider = ({ children }) => {
     fetchMeals(`${allMealsURL}${searchTerm}`);
   }, [searchTerm]) 
 
-  return <AppContext.Provider value={{meals, loading, setSearchTerm, fetchRandomMeal, showmModal, selectedMeal, selectMeal}}>
+  return <AppContext.Provider value={{meals, loading, setSearchTerm, fetchRandomMeal, showmModal, selectedMeal, selectMeal, closeModal }}>
     { children }
   </AppContext.Provider>
 }
